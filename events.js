@@ -1,5 +1,5 @@
-// Don't change or delete this line! It waits until the DOM has loaded, then calls 
-// the start function. More info: 
+// Don't change or delete this line! It waits until the DOM has loaded, then calls
+// the start function. More info:
 // https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded
 document.addEventListener('DOMContentLoaded', start)
 
@@ -7,8 +7,11 @@ function start () {
   // The first example is done for you. This will change the background colour of the first div
   // when you mouse over it.
   one()
-    
+
   // Your turn! Create a new function called `two`, then call it from here.
+  two()
+  three()
+  four()
 }
 
 function one () {
@@ -23,14 +26,41 @@ function one () {
 }
 
 // CREATE FUNCTION two HERE
+function two () {
+var two = document.getElementById('two')
+two.addEventListener('mouseenter', makeHotPink)
+two.addEventListener('mouseleave', makeWhite)
+}
 
 // CREATE FUNCTION three HERE
 
+function three () {
+var three = document.getElementById('three')
+three.addEventListener('mouseenter', makeYellow)
+three.addEventListener('mouseleave', makeWhite)
+}
 // CREATE FUNCTION four HERE
+function four () {
+var four = document.getElementById('four')
+four.addEventListener('mouseenter', makePurple)
+four.addEventListener('mouseleave', makeWhite)
+}
 
 // Changes the background color of event's target
 function makeBlue (evt) {
   evt.target.style.backgroundColor = 'blue'
+}
+
+function makeHotPink (evt) {
+  evt.target.style.backgroundColor = 'hotpink'
+}
+
+function makePurple (evt) {
+  evt.target.style.backgroundColor = 'purple'
+}
+
+function makeYellow (evt) {
+  evt.target.style.backgroundColor = 'yellow'
 }
 
 function makeWhite (evt) {
